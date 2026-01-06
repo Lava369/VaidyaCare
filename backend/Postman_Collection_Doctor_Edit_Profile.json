@@ -1,0 +1,73 @@
+{
+	"info": {
+		"name": "Doctor Edit Profile API",
+		"description": "API collection for Doctor Edit Profile operations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Doctor Edit Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.26.77.190/vaidyacare/api/get_doctor_edit_profile.php?doctor_id=1",
+					"protocol": "http",
+					"host": [
+						"10.26.77.190"
+					],
+					"path": [
+						"vaidyacare",
+						"api",
+						"get_doctor_edit_profile.php"
+					],
+					"query": [
+						{
+							"key": "doctor_id",
+							"value": "1",
+							"description": "Doctor ID"
+						}
+					]
+				},
+				"description": "Get doctor edit profile data (display_name, bio, clinic_name, clinic_address, profile_image)"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Doctor Edit Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"doctor_id\": 1,\n    \"display_name\": \"Dr. Arun Kumar\",\n    \"bio\": \"Experienced General Medicine practitioner with 10+ years of clinical experience. Specialized in preventive care and chronic disease management.\",\n    \"clinic_name\": \"VaidyaCare Medical Center\",\n    \"clinic_address\": \"123 Medical Plaza, Mumbai, Maharashtra 400001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.26.77.190/vaidyacare/api/update_doctor_edit_profile.php",
+					"protocol": "http",
+					"host": [
+						"10.26.77.190"
+					],
+					"path": [
+						"vaidyacare",
+						"api",
+						"update_doctor_edit_profile.php"
+					]
+				},
+				"description": "Update doctor edit profile (display_name, bio, clinic_name, clinic_address)"
+			},
+			"response": []
+		}
+	]
+}
+

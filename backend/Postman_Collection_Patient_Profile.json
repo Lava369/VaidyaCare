@@ -1,0 +1,110 @@
+{
+	"info": {
+		"name": "Patient Profile API",
+		"description": "API collection for Patient Profile management (EditProfile.kt)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Patient Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.26.77.190/vaidyacare/api/patientget_profile.php?email=user@example.com",
+					"protocol": "http",
+					"host": [
+						"10",
+						"26",
+						"77",
+						"190"
+					],
+					"path": [
+						"vaidyacare",
+						"api",
+						"patientget_profile.php"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "user@example.com",
+							"description": "Patient email address"
+						}
+					]
+				},
+				"description": "Get patient profile by email or user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient Profile by User ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.26.77.190/vaidyacare/api/patientget_profile.php?user_id=1",
+					"protocol": "http",
+					"host": [
+						"10",
+						"26",
+						"77",
+						"190"
+					],
+					"path": [
+						"vaidyacare",
+						"api",
+						"patientget_profile.php"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"description": "Patient user_id"
+						}
+					]
+				},
+				"description": "Get patient profile by user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Save Patient Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"full_name\": \"John Doe\",\n    \"email\": \"user@example.com\",\n    \"mobile\": \"9876543210\",\n    \"dob\": \"1990-05-15\",\n    \"gender\": \"Male\",\n    \"blood_group\": \"O+\",\n    \"height\": \"175\",\n    \"weight\": \"70\",\n    \"address\": \"123 Main Street\",\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\",\n    \"pin\": \"400001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.26.77.190/vaidyacare/api/patientSave_profile.php",
+					"protocol": "http",
+					"host": [
+						"10",
+						"26",
+						"77",
+						"190"
+					],
+					"path": [
+						"vaidyacare",
+						"api",
+						"patientSave_profile.php"
+					]
+				},
+				"description": "Update patient profile information"
+			},
+			"response": []
+		}
+	]
+}
+
